@@ -423,16 +423,38 @@ $(function () {
             <div class="card">
                 <div class="card-content">
                     
-                        <div class="dream">
+
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
     
     <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            富贵必从勤苦得，男儿须读五车书。——杜甫
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
         </div>
     </div>
 </div>
-                    
 
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"亲亲我的宝贝","artist":"周华健","url":"http://dl.stream.qqmusic.qq.com/M500002uwoic0gUKJ2.mp3?vkey=64D9374B56EEBB165D694FB30D54233212B74A2AC24938579ED6CF4D103B706C5334CF00DAA057673AA0FEF97A7CCE2B0C62D85D701A8A7E&guid=5150825362&fromtag=1","cover":"https://pic.xiami.net/images/album/img58/1258/66201400571486.jpg"}]')
+    });
+});
+</script>
                     
 
                     
